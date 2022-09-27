@@ -5,7 +5,7 @@
       :checked="todoProps.completed"
       @click="handleClick"
     />
-    {{ todoProps?.text }}
+    {{ todoProps?.title }}
     <button class="del-btn" @click="handleDelete">Delete</button>
   </p>
 </template>

@@ -6,7 +6,6 @@
 </template>
 <script>
 import { ref } from '@vue/reactivity'
-import { v4 as uuidv4 } from 'uuid'
 
 export default {
   name: 'Add Todo',
@@ -15,8 +14,7 @@ export default {
     const addItem = e => {
       e.preventDefault()
       const newItem = {
-        id: uuidv4(),
-        text: title.value,
+        title: title.value,
         completed: false
       }
       context.emit('adNewTodo', newItem)
